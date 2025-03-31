@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шопинг на диване</title>
+    <style>
+        body {
+            background: url('https://img.freepik.com/free-photo/summer-accessories-board_23-2148107844.jpg?t=st=1743435800~exp=1743439400~hmac=bd6a7e9aea49b3d991065ae553e8f1fe74e7e5a370375f2e8aa129f3b5d5d6b5&w=1380') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 250, 240, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .highlight-text, h1, h2, h3, ul li::before {
+            color: #E65100;
+        }
+        .button-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #FF5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        ul li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+        }
+        ul li::before {
+            content: "✔";
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function redirectTo(url) {
+            let countdown = 3;
+            document.getElementById('timer').innerText = countdown;
+            document.getElementById('redirect-message').style.display = 'block';
+            function updateTimer() {
+                countdown--;
+                document.getElementById('timer').innerText = countdown;
+                if (countdown === 0) {
+                    window.location.href = url;
+                } else {
+                    setTimeout(updateTimer, 1000);
+                }
+            }
+            setTimeout(updateTimer, 1000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img class="header-image" src="https://scontent.ftlv19-3.fna.fbcdn.net/v/t39.30808-6/481082085_122111700932760341_2412622583823532819_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=X-0pUBdlzUkQ7kNvgEC5U4Z&_nc_oc=AdmmDvHaSXPqufDGY4H78XV-CnVjrmcTovW-_b9yZGVkxgQyJYGaHMdz0GfgP-NFd0o502uz1ZzH1Xb58ikOFwrW&_nc_zt=23&_nc_ht=scontent.ftlv19-3.fna&_nc_gid=QMZ6SI8DCs0Dmen4V2XQxg&oh=00_AYGY8kBMH6sbO63z1cL1hp8advxpW8iLUFKe2AswS-a_ow&oe=67F0A928" alt="Шопинг на диване">
+        <h1>🌸 <span class="highlight-text">Шопинг на диване – рай для тех, кто любит красивые вещи по отличным ценам! </span>🌸</h1>
+        <p>Мечтаете о стильной одежде, обуви, аксессуарах и украшениях, но не хотите переплачивать? 💃✨</p>
+        <h2 class="highlight-text">Присоединяйтесь к нашему секретному сообществу и получайте:</h2>
+        <ul>
+            <li>ЛУЧШИЕ предложения на AliExpress и других топовых площадках</li>
+            <li>Горячие скидки на моду, обувь и аксессуары</li>
+            <li>Стильные украшения и брендовые товары со скидками до 70%</li>
+            <li>Эксклюзивные купоны и секретные акции только для наших подписчиков</li>
+        </ul>
+        <p><strong class="highlight-text">👑 Только топовые находки, никакого спама!</strong><br>Каждый день – новые тренды, выгодные предложения и товары, которые хочется купить прямо сейчас!</p>
+        <h3 class="highlight-text"><strong>Почему стоит присоединиться?</strong></h3>
+        <ul>
+            <li>Экономия до 70% – цены в разы ниже, чем в магазинах</li>
+            <li>Проверенные продавцы – только качественные товары</li>
+            <li>Обновления напрямую в WhatsApp, Telegram и Facebook – экономьте время и деньги</li>
+            <li>Секретные скидки и купоны – предложения, которых нет в открытом доступе</li>
+            <li>Без спама! – только реальные скидки и выгодные предложения</li>
+        </ul>
+        <p>⚡ <strong>Количество мест ограничено!</strong> ⚡<br>Присоединиться можно <strong>бесплатно</strong>, нажав на кнопку ниже:</p>
+        <h2 class="highlight-text">Выберите, где вам удобнее и присоединяйтесь:</h2>
+        <p id="redirect-message" style="display: none;">Redirecting in <span id="timer">3</span> seconds...</p>
+        <div class="button-container">
+            <a class="button" href="#" onclick="redirectTo('https://chat.whatsapp.com/KK4pYOaBdpD0ctXukJcX7o')">WhatsApp</a>
+            <a class="button" href="#" onclick="redirectTo('https://t.me/gdecupit')">Telegram</a>
+        </div>
+    </div>
+</body>
+</html>
